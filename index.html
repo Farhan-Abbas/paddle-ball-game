@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Paddle-Ball Game</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<style>
+			canvas {
+				border: 1px solid black;
+			}
+		</style>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<h1>Welcome to Paddle-Ball Game!</h1>
+		<div>
+			<button id="startGameButton" onClick="startGame()">Start Game</button>
+			<button id="resetGameButton" onClick="resetGame()">Reset Game</button>
+		</div>
+		<div id="container">
+			<canvas id="gameCanvas" width="1000" height="600"></canvas>
+			<div>
+				<p>
+					Welcome to the ultimate Paddle-Ball challenge! Your task: keep the
+					ball in play using your paddle. But beware, as your score climbs, the
+					ball's speed will too! Miss a hit and you're back to square one. Ready
+					for the thrill? Good luck, gamer!
+				</p>
+				<h2>Score:</h2>
+				<h2>Max Score:</h2>
+				<h2>Attempt:</h2>
+			</div>
+		</div>
+		<script src="game.js"></script>
+	</body>
+</html>
