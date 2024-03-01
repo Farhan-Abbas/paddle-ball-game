@@ -26,6 +26,7 @@ imgSlider.onload = draw;
 let bgImage = new Image();
 bgImage.src = 'canvasbackground.png';
 
+
 function draw() {
 	// Clear the canvas
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -37,8 +38,13 @@ function draw() {
 	ctx.drawImage(imgBall, xPos, yPos, 45, 45);
 	ctx.drawImage(imgSlider, xPosSlider, yPosSlider, 140, 30);
 
+
+	// if the game has not started yet, the initial state will be drawn but the game will not start.
+	if (!gameStarted) {
+        return;
+    }
 	// Request the browser to call draw() again for the next frame
-	requestAnimationFrame(update);
+	requestAnimationFrame(update); // Call update() again to animate the next frame
 }
 
 function update() {
@@ -132,8 +138,10 @@ function moveSlider(key) {
 	}
 }
 
+let gameStarted = false;
 
 function startGame() {
+	gameStarted = true;
 	update();
 }
 
