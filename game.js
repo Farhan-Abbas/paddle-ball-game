@@ -3,8 +3,8 @@ const ctx = canvas.getContext("2d");
 
 let xPos = Math.floor(Math.random() * (Math.floor(canvas.width - 50) - Math.floor(0) + 1)) + Math.floor(0);
 let yPos = 10;
-let xSpeed = 2;
-let ySpeed = 2;
+let xSpeed = 4;
+let ySpeed = 4;
 let score = 0;
 let maxScore = 0;
 let attempt = 1;
@@ -71,8 +71,8 @@ function ballMove () {
 		xSpeed =- xSpeed;
 		score = 0;
 		attempt += 1;
-		xSpeed = 2;
-		ySpeed = 2;
+		xSpeed = 4;
+		ySpeed = 4;
 	}
 
 	if (yPos < 0) {
@@ -148,8 +148,8 @@ function startGame() {
 function resetGame() {
 	xPos = Math.floor(Math.random() * (Math.floor(canvas.width - 50) - Math.floor(0) + 1)) + Math.floor(0);
 	yPos = 10;
-	xSpeed = 2;
-	ySpeed = 2;
+	xSpeed = 4;
+	ySpeed = 4;
 	score = 0;
 	maxScore = 0;
 	attempt = 1;
